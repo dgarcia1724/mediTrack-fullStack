@@ -1,4 +1,4 @@
-package main.java.com.meditrack.user_service.model;
+package com.meditrack.user_service.model;
 
 public enum Role {
     ADMIN,

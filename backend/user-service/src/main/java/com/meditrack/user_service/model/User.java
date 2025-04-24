@@ -1,20 +1,14 @@
-package main.java.com.meditrack.user_service.model;
+package com.meditrack.user_service.model;
 
+import jakarta.persistence.*;
+import lombok.*;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 @Entity
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
 public class User {
     @Id
@@ -43,4 +37,4 @@ public class User {
     public void preUpdate() {
         this.updatedAt = LocalDateTime.now();
     }
-}
+} 
