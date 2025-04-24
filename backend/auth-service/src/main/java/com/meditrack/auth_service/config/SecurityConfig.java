@@ -38,6 +38,11 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/public/**").permitAll()
+                        .requestMatchers("/api/users/setup-admin").permitAll()
+                        .requestMatchers("/api/users/setup-test-admin").permitAll()
+                        .requestMatchers("/api/users/get-test-token").permitAll()
+                        .requestMatchers("/api/users/verify").permitAll()
+                        .requestMatchers("/api/users/verify-token").permitAll()
                         .anyRequest().authenticated()
                 )
                 .addFilterBefore(firebaseAuthFilter, UsernamePasswordAuthenticationFilter.class)

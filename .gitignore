@@ -1,3 +1,5 @@
 *.json
 # or more specifically:
 serviceAccountKey.json
+
+.env*
